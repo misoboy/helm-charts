@@ -3,7 +3,7 @@ entries:
   kube-state-metrics:
   - apiVersion: v2
     appVersion: 2.2.4
-    created: "2022-03-23T14:05:01.14411+09:00"
+    created: "2022-03-23T14:18:22.501433+09:00"
     description: Install kube-state-metrics to generate and expose cluster-level metrics
     digest: 77c9964413536c0d833b7c6ba3b531719f948fcc6c8d7c90b0a5f32f6d38c50c
     home: https://github.com/kubernetes/kube-state-metrics/
@@ -29,14 +29,14 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 2.31.1
-    created: "2022-03-23T14:05:01.153868+09:00"
+    created: "2022-03-23T14:18:22.511221+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
-      repository: https://misoboy.github.io/helm-charts
+      repository: https://misoboy.github.io/helm-charts/stable
       version: 4.1.2
     description: Prometheus is a monitoring system and time series database.
-    digest: 147ac6efdcdf56fcf84f0128257b92fbd4eef5254d362f6dfd170d00684b770f
+    digest: 5a73d9fb832e4c3a92a51621996773a2b49de6fe896e3afb8567ce44e64032f8
     home: https://prometheus.io/
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     maintainers:
@@ -61,4 +61,4 @@ entries:
     urls:
     - prometheus-15.0.4.tgz
     version: 15.0.4
-generated: "2022-03-23T14:05:01.140423+09:00"
+generated: "2022-03-23T14:18:22.499416+09:00"
