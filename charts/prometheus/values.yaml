@@ -1684,10 +1684,6 @@ serverFiles:
               - prometheus-server.prometheus.svc.cluster.local:80
             labels:
               cluster: cluster01
-          - targets:
-              - cluster02-prometheusdev.csm.opsnow.com:80
-            labels:
-              cluster: cluster02
 
 
 #      추후 Push Gateway 사용시 주석 해제
