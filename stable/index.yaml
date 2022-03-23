@@ -1,0 +1,64 @@
+apiVersion: v1
+entries:
+  kube-state-metrics:
+  - apiVersion: v2
+    appVersion: 2.2.4
+    created: "2022-03-23T14:05:01.14411+09:00"
+    description: Install kube-state-metrics to generate and expose cluster-level metrics
+    digest: 77c9964413536c0d833b7c6ba3b531719f948fcc6c8d7c90b0a5f32f6d38c50c
+    home: https://github.com/kubernetes/kube-state-metrics/
+    keywords:
+    - metric
+    - monitoring
+    - prometheus
+    - kubernetes
+    maintainers:
+    - email: tariq.ibrahim@mulesoft.com
+      name: tariq1890
+    - email: manuel@rueg.eu
+      name: mrueg
+    - email: davidcalvertfr@gmail.com
+      name: dotdc
+    name: kube-state-metrics
+    sources:
+    - https://github.com/kubernetes/kube-state-metrics/
+    type: application
+    urls:
+    - kube-state-metrics-4.1.2.tgz
+    version: 4.1.2
+  prometheus:
+  - apiVersion: v2
+    appVersion: 2.31.1
+    created: "2022-03-23T14:05:01.153868+09:00"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://misoboy.github.io/helm-charts
+      version: 4.1.2
+    description: Prometheus is a monitoring system and time series database.
+    digest: 147ac6efdcdf56fcf84f0128257b92fbd4eef5254d362f6dfd170d00684b770f
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: monotek23@gmail.com
+      name: monotek
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: prometheus
+    sources:
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    type: application
+    urls:
+    - prometheus-15.0.4.tgz
+    version: 15.0.4
+generated: "2022-03-23T14:05:01.140423+09:00"
