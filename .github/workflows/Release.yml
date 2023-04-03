@@ -1,0 +1,15 @@
+name: Release
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: |
+          echo "${{ toJson(github.event.release) }}"
+          echo "tag_name => ${{ github.event.release.tag_name }}"
