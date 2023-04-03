@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  cicd-sample-helm:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-04-03T11:58:13.098983+09:00"
+    description: A Helm chart for Kubernetes
+    digest: 13c8aba0a2a6a556a451fd1636b021ae58856be82b700dfa9c5aacb04b204bc6
+    name: cicd-sample-helm
+    type: application
+    urls:
+    - https://misoboy.github.io/helm-charts/packages/cicd-sample-helm-0.1.0.tgz
+    version: 0.1.0
   kube-state-metrics:
   - apiVersion: v2
     appVersion: 2.2.4
-    created: "2022-03-23T15:59:00.969251+09:00"
+    created: "2023-04-03T11:58:13.100604+09:00"
     description: Install kube-state-metrics to generate and expose cluster-level metrics
     digest: 7b6757ac8f80b0525f9c64c0f0a294c958c87120f0135f2936f0d94900e84d62
     home: https://github.com/kubernetes/kube-state-metrics/
@@ -29,7 +40,7 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 2.31.1
-    created: "2022-03-23T15:59:00.976176+09:00"
+    created: "2023-04-03T11:58:13.106468+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -61,4 +72,4 @@ entries:
     urls:
     - https://misoboy.github.io/helm-charts/packages/prometheus-15.0.4.tgz
     version: 15.0.4
-generated: "2022-03-23T15:59:00.967873+09:00"
+generated: "2023-04-03T11:58:13.090494+09:00"
