@@ -30,7 +30,7 @@ jobs:
           version: 2.5.5
           command: app patch ${{ steps.release-vars.outputs.CHART_NAME }}
           options: >
-            --patch '{"metadata": { "labels": { "helmVersion": "${{ steps.release-vars.outputs.CHART_VERSION }}" }}}'
+            --patch '{"spec": { "source": { "targetRevision": "${{ steps.release-vars.outputs.CHART_VERSION }}" }}}'
             --type merge
             --server ${{ secrets.ARGOCD_HOST }}
             --insecure
