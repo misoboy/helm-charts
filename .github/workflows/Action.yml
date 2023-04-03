@@ -1,0 +1,26 @@
+name: Action
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Helm Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Configure Git
+        run: |
+          git config user.name "misoboy"
+          git config user.email "misoboy.kor@gmail.com"
+
+      - name: Install Helm
+        uses: azure/setup-helm@v3
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.5.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
