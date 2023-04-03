@@ -8,7 +8,30 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Test
+      - id: release-vars
+        name: Release Variables
         run: |
-          echo "${{ toJson(github.event.release) }}"
-          echo "tag_name => ${{ github.event.release.tag_name }}"
+          
+          TAG_NAME="${{ github.event.release.tag_name }}"
+          CHART_NAME="${$TAG_NAME%-*}"
+          CHART_VERSION=$(echo $TAG_NAME | perl -pe '($_)=/([0-9]+([.][0-9]+)+)/')
+          
+          echo "CHART_NAME=$CHART_NAME" >> $GITHUB_OUTPUT
+          echo "CHART_VERSION=$CHART_VERSION" >> $GITHUB_OUTPUT
+          
+          echo $TAG_NAME
+          echo $CHART_NAME
+          echo $CHART_VERSION
+
+      - uses: clowdhaus/argo-cd-action/@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          version: 2.5.5
+          command: app patch ${{ steps.release-vars.outputs.CHART_NAME }}
+          options: >
+            --patch '{"metadata": { "labels": { "helmVersion": "${{ steps.release-vars.outputs.CHART_VERSION }}" }}}'
+            --type merge
+            --server ${{ secrets.ARGOCD_HOST }}
+            --insecure
+            --auth-token ${{ secrets.ARGOCD_TOKEN }}
