@@ -6,7 +6,7 @@ image:
   repository: misoboy/scheduler-management
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.0.8"
+  tag: "1.0.9"
 initContainers:
   - name: init-database
     image: busybox:1.28
@@ -23,7 +23,7 @@ serviceAccount:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
-podAnnotations: {timestamp: "20230403063401"}
+podAnnotations: {timestamp: "20230404070221"}
 podSecurityContext: {}
 # fsGroup: 2000
 
