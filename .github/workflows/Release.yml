@@ -22,6 +22,13 @@ jobs:
           echo $TAG_NAME
           echo $CHART_NAME
           echo $CHART_VERSION
+      
+      - id: wait-published
+        name: Wait Published
+        run: |
+          CNT=0
+          CHART_VERSION=${{ steps.release-vars.outputs.CHART_VERSION }}
+          while [ $CNT == 0 ]; do helm repo update misoboy >> /dev/null; CNT=$(helm search repo misoboy/${{ steps.release-vars.outputs.CHART_NAME }} --version $CHART_VERSION -o json | jq length); sleep 1; done
 
       - uses: clowdhaus/argo-cd-action/@main
         env:
