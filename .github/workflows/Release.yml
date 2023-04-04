@@ -26,6 +26,8 @@ jobs:
       - id: wait-published
         name: Wait Published
         run: |
+          helm repo add misoboy https://misoboy.github.io/helm-charts
+          
           CNT=0
           CHART_NAME=${{ steps.release-vars.outputs.CHART_NAME }}
           CHART_VERSION=${{ steps.release-vars.outputs.CHART_VERSION }}
