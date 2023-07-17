@@ -3,7 +3,7 @@ entries:
   cicd-sample-helm:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-03T12:11:50.124072+09:00"
+    created: "2023-07-17T12:53:49.775383+09:00"
     description: A Helm chart for Kubernetes
     digest: 13c8aba0a2a6a556a451fd1636b021ae58856be82b700dfa9c5aacb04b204bc6
     name: cicd-sample-helm
@@ -14,7 +14,7 @@ entries:
   kube-state-metrics:
   - apiVersion: v2
     appVersion: 2.2.4
-    created: "2023-04-03T12:11:50.125098+09:00"
+    created: "2023-07-17T12:53:49.781111+09:00"
     description: Install kube-state-metrics to generate and expose cluster-level metrics
     digest: 7b6757ac8f80b0525f9c64c0f0a294c958c87120f0135f2936f0d94900e84d62
     home: https://github.com/kubernetes/kube-state-metrics/
@@ -40,7 +40,7 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 2.31.1
-    created: "2023-04-03T12:11:50.129174+09:00"
+    created: "2023-07-17T12:53:49.786401+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -75,127 +75,17 @@ entries:
   scheduler-management:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T03:50:08.863896837Z"
+    created: "2023-07-17T12:53:49.787958+09:00"
     description: A Helm chart for Kubernetes
-    digest: b412fda5e9079f91487c46ba5d50c59565b0d765249a088f2faeed0d87878217
+    digest: 03ee00ce6ca25df1bae7b27c74106bd4a288579f0f045e6684c62af43a7fb149
     name: scheduler-management
     type: application
     urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.11/scheduler-management-1.0.11.tgz
+    - https://misoboy.github.io/helm-charts/packages/scheduler-management-1.0.11.tgz
     version: 1.0.11
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-04T07:09:27.186388404Z"
-    description: A Helm chart for Kubernetes
-    digest: 061ea89e5031a51d0bf08d915cd50895def5000b8b3410a48aa7ebb0ad32732c
-    name: scheduler-management
-    type: application
-    urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.10/scheduler-management-1.0.10.tgz
-    version: 1.0.10
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-04-04T07:02:39.704848633Z"
-    description: A Helm chart for Kubernetes
-    digest: ce59ace08a3e145fc0b507c2d56c16012e333c5145d79b7b050d5ab266729b69
-    name: scheduler-management
-    type: application
-    urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.9/scheduler-management-1.0.9.tgz
-    version: 1.0.9
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-04-03T06:34:18.227339284Z"
-    description: A Helm chart for Kubernetes
-    digest: 8f6d173cd3d6ae3732510e73f6163b338d5f18b2c9f4bdb65f7bf972c8b68838
-    name: scheduler-management
-    type: application
-    urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.8/scheduler-management-1.0.8.tgz
-    version: 1.0.8
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-04-03T06:27:23.190167976Z"
-    description: A Helm chart for Kubernetes
-    digest: 3f4a8cc3338686f7efcd2336b9e8a73eadad9294789c5c4f2ba5faf389ee6928
-    name: scheduler-management
-    type: application
-    urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.7/scheduler-management-1.0.7.tgz
-    version: 1.0.7
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-04-03T06:23:04.199595862Z"
-    description: A Helm chart for Kubernetes
-    digest: b0446909ed0a46616c59d86ab10ec7964556fb06325dbe3e9467515dc88461cc
-    name: scheduler-management
-    type: application
-    urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.6/scheduler-management-1.0.6.tgz
-    version: 1.0.6
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-04-03T05:42:34.663375575Z"
-    description: A Helm chart for Kubernetes
-    digest: 5ea84a2a9b2e0e645a1b68d6289dd4bcb17bb3bb25f8839cd7beacd44ff66f69
-    name: scheduler-management
-    type: application
-    urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.5/scheduler-management-1.0.5.tgz
-    version: 1.0.5
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-04-03T05:31:16.912541064Z"
-    description: A Helm chart for Kubernetes
-    digest: fbac5a0b4443cd7b68a94a45c7643f281a32130f2c336cbc04707da1112b1be5
-    name: scheduler-management
-    type: application
-    urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.4/scheduler-management-1.0.4.tgz
-    version: 1.0.4
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-04-03T05:06:37.794127272Z"
-    description: A Helm chart for Kubernetes
-    digest: 464b18518de99a1e6c4afddaede5fb7262a2bb82c5d58c3a3c2492d10905b21b
-    name: scheduler-management
-    type: application
-    urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.3/scheduler-management-1.0.3.tgz
-    version: 1.0.3
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-04-03T04:58:21.675139165Z"
-    description: A Helm chart for Kubernetes
-    digest: 9560952fc31ca25a3047fb482ee757e1e41e974818412e7bd1ddc25b05ac0e66
-    name: scheduler-management
-    type: application
-    urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.2/scheduler-management-1.0.2.tgz
-    version: 1.0.2
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-04-03T04:48:53.911170495Z"
-    description: A Helm chart for Kubernetes
-    digest: a696ab5f093071f063d6e55580e46269be9b76304328924e3d72df19017a33df
-    name: scheduler-management
-    type: application
-    urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.1/scheduler-management-1.0.1.tgz
-    version: 1.0.1
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-04-03T04:25:47.833745858Z"
-    description: A Helm chart for Kubernetes
-    digest: 26284bb07fedc09f6788e8a990ac69d172361e592cebe077773fa4aff26447e9
-    name: scheduler-management
-    type: application
-    urls:
-    - https://github.com/misoboy/helm-charts/releases/download/scheduler-management-1.0.0/scheduler-management-1.0.0.tgz
-    version: 1.0.0
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-04-03T12:11:50.129903+09:00"
+    created: "2023-07-17T12:53:49.787183+09:00"
     description: A Helm chart for Kubernetes
     digest: 926cfd30bb3f6b0ee71f3dbc82ef15683232a6c56d3943414a37a56069fe33cf
     name: scheduler-management
@@ -203,4 +93,4 @@ entries:
     urls:
     - https://misoboy.github.io/helm-charts/packages/scheduler-management-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-17T03:50:08.864971897Z"
+generated: "2023-07-17T12:53:49.771271+09:00"
