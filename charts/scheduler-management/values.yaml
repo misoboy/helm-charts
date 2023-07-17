@@ -3,10 +3,10 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: misoboy/scheduler-management
+  repository: harbor.slabs.kr/general-app/scheduler-management
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.0.10"
+  tag: "1.0.11"
 initContainers:
   - name: init-database
     image: busybox:1.28
@@ -23,7 +23,7 @@ serviceAccount:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
-podAnnotations: {timestamp: "20230404070913"}
+podAnnotations: {timestamp: "20230717034717"}
 podSecurityContext: {}
 # fsGroup: 2000
 
